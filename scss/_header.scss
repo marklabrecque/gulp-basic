@@ -1,0 +1,27 @@
+header {	
+  @include layout(12 .25 outside);
+  display:block;
+  height:100px;
+	border:1px solid #000;
+  .wrapper {
+    @include container(80em);
+    .logo {
+      @include span(6);
+      float:left;
+      height:100%;
+    }
+    nav {
+      @include span(6);
+      float:left;
+      height:100%;
+      ul {
+        li {
+          display:inline-block;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
