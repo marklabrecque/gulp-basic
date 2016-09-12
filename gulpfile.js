@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
 
-// Gulp Sass Task 
+// Gulp Sass Task
 gulp.task('sass', function() {
   gulp.src('./scss/{,*/}*.{scss,sass}')
     .pipe(sourcemaps.init())
@@ -29,10 +29,9 @@ gulp.task('serve', ['sass'], function() {
 // Create Gulp Default Task
 // ------------------------
 // Having watch within the task ensures that 'sass' has already ran before watching
-// 
+//
 // This setup is slightly different from the one on the blog post at
 // http://www.zell-weekeat.com/gulp-libsass-with-susy/#comment-1910185635
 gulp.task('default', ['serve'], function () {
   gulp.watch('./scss/{,*/}*.{scss,sass}', ['sass'])
 });
-
